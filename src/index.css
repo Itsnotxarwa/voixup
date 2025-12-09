@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+html::-webkit-scrollbar {
+  width: 12px; 
+  height: 12px; 
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+html::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #4EE2EC, #F2C14E);
+  border-radius: 6px;
+  border: 3px solid transparent; 
+  background-clip: content-box;
+}
+
+.button-connecter {
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: 1px solid #F2C14E;
+  font-size: 14px;
+  font-weight: 600;
+  background: transparent;
+  color: #000;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.button-connecter:hover {
+  background: #F2C14E;
+  color: white;
+  box-shadow: 0 0 30px 5px #F2C14E;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.button-connecter:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+.button-connecter::before {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+.button-connecter:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
