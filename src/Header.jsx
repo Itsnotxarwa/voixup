@@ -1,5 +1,4 @@
 import { ArrowUpRight, ArrowRight } from "lucide-react";
-import VoixUpLogo from './assets/VOIXUP.png';
 import { Link } from "react-router-dom";
 
 export default function Header() {
@@ -10,7 +9,7 @@ export default function Header() {
                         <div className="flex justify-between items-center py-4">
                             <Link to="/">
                             <div>
-                                <img src={VoixUpLogo} alt="Logo" className="w-25 h-auto" />
+                                <h1 className="text-black font-bold text-lg">Mazia</h1>
                             </div>
                             </Link>
                             <div>

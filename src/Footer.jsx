@@ -1,12 +1,12 @@
 import { Mail } from 'lucide-react';
 
-export default function Footer({bg = "bg-black", text = "text-white", borderTop = "border-t border-white", VoixUpLogo }) {
+export default function Footer({bg = "bg-black", text = "text-white", borderTop = "border-t border-white" }) {
     return(
         <footer className={`${bg} ${text} relative pt-16 pb-8`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid md:grid-cols-2">
                     <div className='space-y-6'>
-                        <img src={VoixUpLogo} alt="Logo" className='w-32 hover:opacity-80 transition-opacity' />
+                        <h1 className="text-black font-bold text-lg hover:opacity-80 transition-opacity">Mazia</h1>
                         <p className='text-lg leading-relaxed max-w-md'>Optimisez votre standard téléphonique : des IA qui saisissent chaque opportunité.</p>
                     </div>
                     <div className='space-y-6'>

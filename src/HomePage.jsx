@@ -1,5 +1,4 @@
 import Header from "./Header";
-import VoixUpLogo from './assets/VOIXUP.png';
 import HeroSection from "./Home/heroSection"
 import FeaturesSection from "./Home/FeaturesSection";
 import RequestDemo from "./Home/RequestDemo";
@@ -28,7 +27,7 @@ export default function HomePage() {
             <Dots />
             <RequestDemo />
             <QuestionsSection />
-            <Footer VoixUpLogo={VoixUpLogo} bg="bg-white" text="text-black" borderTop ="border-t border-gray-300" />
+            <Footer bg="bg-white" text="text-black" borderTop ="border-t border-gray-300" />
         </div>
     )
 }
