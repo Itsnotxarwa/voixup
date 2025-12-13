@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
-import { features } from "./FeaturesData";
+import { features } from "../data/FeaturesData";
 import { ArrowRight } from "lucide-react";
 
 export default function FeaturesSection() {

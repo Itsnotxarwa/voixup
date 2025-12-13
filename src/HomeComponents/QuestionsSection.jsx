@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { MoveRight, Plus, Minus } from "lucide-react";
 import { Fade } from "react-awesome-reveal";
-import { question } from "./Questions";
+import { question } from "../data/Questions";
 
 export default function QuestionsSection() {
     const [openIndex, setOpenIndex] = useState(null);
@@ -44,7 +44,7 @@ export default function QuestionsSection() {
                         )})}
                     </div>
                     <div className="mt-12 text-center text-white">
-                        <h3 className="text-lg font-medium text-whit mb-4">Vous ne trouvez pas ce que vous cherchez ? Envoyez-nous un e-mail.</h3>
+                        <h3 className="text-lg font-medium text-whit mb-4">Vous ne trouvez pas ce que vous cherchez? Envoyez-nous un e-mail.</h3>
                         <div className="flex items-center justify-center">
                             <button className="flex items-center justify-center gap-2 whitespace-nowrap font-medium bg-white text-black h-9 rounded-lg px-5 shadow-sm hover:bg-white/90 hover:shadow-md group">
                             <p>hi@voixup.fr</p>

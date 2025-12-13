@@ -1,12 +1,12 @@
 import Header from "./Header";
-import HeroSection from "./Home/heroSection"
-import FeaturesSection from "./Home/FeaturesSection";
-import RequestDemo from "./Home/RequestDemo";
-import QuestionsSection from "./Home/QuestionsSection";
+import HeroSection from "./HomeComponents/heroSection"
+import FeaturesSection from "./HomeComponents/FeaturesSection";
+import RequestDemo from "./HomeComponents/RequestDemo";
+import QuestionsSection from "./HomeComponents/QuestionsSection";
 import Footer from "./Footer";
-import Benefits from "./Home/BenefitsSection";
-import UsageExamples from "./Home/UsageExamples";
-import Dots from "./Home/Dots"
+import Benefits from "./HomeComponents/BenefitsSection";
+import UsageExamples from "./HomeComponents/UsageExamples";
+import Dots from "./HomeComponents/Dots"
 
 
 export default function HomePage() {

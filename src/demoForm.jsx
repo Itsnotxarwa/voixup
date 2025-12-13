@@ -1,10 +1,14 @@
 import React from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useState } from "react";
+import { allCountries } from "./data/countries";
+import { ChevronDown } from "lucide-react";
+
 
 export default function DemoForm({bg = 'bg-white/20', backdropBlur = 'backdrop-blur-md', border = 'border', borderColor = 'border-white/30'}) {
     const recaptchaRef = React.useRef(); 
     const [captchaDone, setCaptchaDone] = useState(false);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
     
     const [serverError, setServerError] = useState("");
     
@@ -12,6 +16,7 @@ export default function DemoForm({bg = 'bg-white/20', backdropBlur = 'backdrop-b
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [phoneNumber, setPhoneNumber] = useState("");
+    const [selectedCountry, setSelectedCountry] = useState(allCountries[0]);
     
     const resetForm = () => {
         setFirstName("");
@@ -137,16 +142,50 @@ export default function DemoForm({bg = 'bg-white/20', backdropBlur = 'backdrop-b
                     className="text-sm text-gray-500 font-medium">
                         Téléphone
                     </label>
-                    <input 
+
+                <div className="relative w-full mt-2 text-gray-500">
+                <div className="absolute inset-y-0 left-3 my-auto h-6 flex items-center border-r pr-2">
+                <div
+                className="text-sm outline-none rounded-lg h-full text-blue-400 cursor-pointer flex items-center justify-between"
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+                >
+                    <span>{selectedCountry ? `+${selectedCountry.code}` : "+33"}</span>
+                    <span>
+                        <ChevronDown size={12} />
+                    </span>
+                </div>
+                </div>
+
+                <input 
                     type="tel" 
-                    placeholder="+33 12 34 56" 
+                    placeholder="+1 (555) 000-000"
                     className="h-10 px-3 py-2 rounded-md w-full 
-                    border border-gray-300 bg-white placeholder:text-gray-500 text-sm text-gray-900
+                    border border-gray-300 pl-18 bg-white placeholder:text-gray-500 text-sm text-gray-900
                     focus:border-[#F2C14E] focus-visible:outline-none"
                     value={phoneNumber}
                     onChange={(e) => setPhoneNumber(e.target.value)}
-                    />
-                </div>
+                />
+                
+                {/* Dropdown menu */}
+                
+                {dropdownOpen && (
+                    <ul className="absolute z-10 mt-1 w-full max-h-60 overflow-auto bg-white border rounded-md shadow-lg">
+                        {allCountries.map((c) => (
+                            <li
+                            key={c.code}
+                            className="flex items-center px-3 py-2 hover:bg-gray-100 cursor-pointer"
+                            onClick={() => {
+                                setSelectedCountry(c);
+                                setDropdownOpen(false);
+                            }}
+                        >
+                        <span>{c.country} (+{c.code})</span>
+                    </li>
+                ))}
+                </ul>
+            )}
+            </div>
+            </div>
                 <div className="flex items-center justify-center">
                     <ReCAPTCHA
                     sitekey="6LeC-hUsAAAAAKjMZmZsKteg9i7KsCskgubtDq4E"

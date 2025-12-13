@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { ChevronRight, ChevronLeft } from "lucide-react";
-import { benefits } from "./BenefitsData";
+import { benefits } from "../data/BenefitsData";
 import { Slide } from "react-awesome-reveal";
 
 export default function BenefitsSection() {

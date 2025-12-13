@@ -1,6 +1,6 @@
 import { Player } from '@lottiefiles/react-lottie-player';
 import { Fade } from "react-awesome-reveal";
-import { usageData } from './UsageData';
+import { usageData } from '../data/UsageData';
 
 export default function UsageExamples() {
 
