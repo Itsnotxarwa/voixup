@@ -41,6 +41,11 @@ export default function DemoForm({bg = 'bg-white/20', backdropBlur = 'backdrop-b
             },
             body: JSON.stringify({ token }),
         });
+
+        if (!token.ok) {
+            setServerError("Captcha invalide.");
+            return;
+        }
         
         const data = await response.json();
         console.log(data);
@@ -56,7 +61,7 @@ export default function DemoForm({bg = 'bg-white/20', backdropBlur = 'backdrop-b
                     first_name: firstName,
                     last_name: lastName,
                     email: email,
-                    phone_number: phoneNumber
+                    phone_number: `+${selectedCountry.code}${phoneNumber}`
                 }),
             })
             
