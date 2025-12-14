@@ -8,7 +8,7 @@ import { ChevronDown } from "lucide-react";
 export default function DemoForm({bg = 'bg-white/20', backdropBlur = 'backdrop-blur-md', border = 'border', borderColor = 'border-white/30'}) {
     const recaptchaRef = React.useRef(); 
     const [captchaDone, setCaptchaDone] = useState(false);
-    const [dropdownOpen, setDropdownOpen] = useState(false);
+    
     
     const [serverError, setServerError] = useState("");
     
@@ -17,6 +17,7 @@ export default function DemoForm({bg = 'bg-white/20', backdropBlur = 'backdrop-b
     const [email, setEmail] = useState("");
     const [phoneNumber, setPhoneNumber] = useState("");
     const [selectedCountry, setSelectedCountry] = useState(allCountries[0]);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
     
     const resetForm = () => {
         setFirstName("");
@@ -46,7 +47,7 @@ export default function DemoForm({bg = 'bg-white/20', backdropBlur = 'backdrop-b
     
         // faire un appele
         try{
-            const res = await fetch("", {
+            const res = await fetch("http://3.88.182.81:8000/calls/demo-outbound-call", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
