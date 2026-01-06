@@ -1,15 +1,19 @@
 import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import VoixupLogo from "./assets/VOIXUP.png";
 
 export default function Header() {
 
     return(
         <header className="sticky top-0 z-50 border-b border-black/10 backdrop-blur-xl bg-white/80">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="flex justify-between items-center py-4">
                             <Link to="/">
                             <div>
-                                <h1 className="text-black font-bold text-lg">Mazia</h1>
+                                <img 
+                                src={VoixupLogo} 
+                                alt="voixup"
+                                className="w-28" />
                             </div>
                             </Link>
                             <div>

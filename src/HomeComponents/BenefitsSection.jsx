@@ -44,7 +44,7 @@ export default function BenefitsSection() {
     return(
         <section className="relative pt-24 pb-32">
           <Slide triggerOnce cascade direction="right" duration={1000}>
-            <div className="mb-6 hidden lg:flex justify-end gap-2  pr-8 sm:pr-6 lg:pr-16">
+            <div className="max-w-7xl mb-6 hidden lg:flex justify-end gap-2 ">
             <button
               onClick={prevSlide}
               className="p-2 bg-white text-gray-300 border border-gray-300 rounded-lg hover:scale-105 transition-transform 
