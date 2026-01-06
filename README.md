@@ -18,7 +18,7 @@ Fast development with Vite HMR
 
 # Clone the repository
 
-git clone https://github.com/Itsnotxarwa/voixup-front.git
+git clone https://github.com/Itsnotxarwa/voixup.git
 
 ## Navigate to the project folder
 
